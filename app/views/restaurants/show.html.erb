@@ -1,0 +1,21 @@
+<div class="card mt-3">
+  <img class="card-img-top w-50 h-100" src="https://images.unsplash.com/photo-1515669097368-22e68427d265?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmVzdGF1cmFudHN8ZW58MHx8MHx8fDA%3D" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><strong><%= @restaurant.name %></strong></h5>
+    <p class="card-text"><%= @restaurant.address %></p>
+    <p class="card-text"><%= @restaurant.phone_number %></p>
+    <p class="card-text"><%= @restaurant.category %></p>
+  </div>
+</div>
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">Avis des clients: <%= review.content %> - Note: <%= review.rating %>/5</li>
+  <% end %>
+</ul>
+<br>
+
+<div class="d-flex">
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary mt-2" %>
+  <%= link_to "Back to list", restaurants_path, class: "btn btn-secondary mt-2" %>
+</div>

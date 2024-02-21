@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1000px;
+}
+
+.btn-primary .color-white,
+.btn-primary .color-white a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.btn-success .color-white,
+.btn-success .color-white a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.all-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container h1 {
+  margin-bottom: 15px;
+}
+
+.te {
+  width: 800px;
+}
